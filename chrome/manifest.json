@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+
+  "name": "SoundCloud Tracklists",
+  "short_name": "SoundCloudTracklists",
+  "description": "Integrates 1001tracklists into SoundCloud",
+  "author": "Dan Bovey",
+  "version": "1.0.0",
+  "minimum_chrome_version": "36",
+
+  "permissions": [
+    "storage",
+    "background",
+    "*://soundcloud.com/*",
+    "*://www.1001tracklists.com/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [ {
+    "css": [ "css/style.css" ],
+    "js": ["js/content.js" ],
+    "matches": [ "http://soundcloud.com/*", "https://soundcloud.com/*"]
+  }],
+
+  "web_accessible_resources": [
+    "img/icons/*.png"
+  ]
+}

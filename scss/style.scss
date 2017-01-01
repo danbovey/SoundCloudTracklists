@@ -1,0 +1,119 @@
+$primaryText: #FFF;
+$secondaryText: #F1F1F1;
+$areaHeight: 70px;
+$tooltipCubic: cubic-bezier(0.64, 0.09, 0.08, 1);
+
+.fullHero__playerArea.hasTracklist {
+    transform: translateY($areaHeight);
+
+    &.hasTracklist--active {
+        transform: translateY(0);
+    }
+}
+
+.fullHero__tracklist {
+    box-sizing: border-box;
+    position: relative;
+    height: $areaHeight;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    color: $primaryText;
+
+    .tracklist__meta {
+        float: left;
+        margin-top: -2px;
+        margin-right: 10px;
+
+        span {
+            display: block;
+        }
+        .tracklist__number {
+            margin-bottom: 2px;
+            padding: 2px 0 3px;
+            font-size: 16px;
+            line-height: 1.2;
+        }
+    }
+
+    .tracklist__title {
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        max-width: 550px;
+        color: $primaryText !important;
+
+        &:hover, &:focus {
+            background: #000;
+        }
+
+        &:after {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            z-index: 2;
+            top: 2px;
+            left: 100%;
+            transform: translateX(12%);
+            padding: 3px 5px;
+            border-radius: 2px;
+            background: grey;
+            font-size: 11px;
+            white-space: nowrap;
+            color: white;
+            transition: opacity 0.2s $tooltipCubic, transform 0.2s $tooltipCubic;
+            content: attr(data-tooltip);
+        }
+        
+        &:hover:after {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(5%);
+        }
+    }
+    .tracklist__label {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .tracklist__media {
+        position: absolute;
+        top: 11px;
+        right: 15px;
+
+        a {
+            position: relative;
+            margin-left: 5px;
+
+            &:after {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                z-index: 2;
+                top: 18px;
+                left: 0;
+                transform: translateX(-25%) translateY(-6px);
+                padding: 3px 5px;
+                border-radius: 2px;
+                background: grey;
+                font-size: 11px;
+                white-space: nowrap;
+                color: white;
+                transition: opacity 0.2s $tooltipCubic, transform 0.2s $tooltipCubic;
+                content: attr(data-tooltip);
+            }
+            
+            &:hover:after {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-25%) translateY(0);
+            }
+        }
+
+        img {
+            display: inline;
+            width: 24px;
+        }
+    }
+}

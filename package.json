@@ -1,0 +1,46 @@
+{
+  "name": "soundcloudtracklists",
+  "version": "1.0.0",
+  "description": "A Google Chrome extension that integrates 1001tracklists into SoundCloud",
+  "main": "src/content.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danbovey/SoundCloudTracklists.git"
+  },
+  "keywords": [
+    "soundcloud",
+    "1001tracklists"
+  ],
+  "author": "Dan Bovey <dan@danbovey.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danbovey/SoundCloudTracklists/issues"
+  },
+  "homepage": "https://github.com/danbovey/SoundCloudTracklists#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "event-stream": "^3.3.3",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprite": "^1.3.3",
+    "gulp-uglify": "^1.5.4",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.8",
+    "run-sequence": "^1.2.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "jsdom": "^9.9.1",
+    "jsdom-no-contextify": "^3.1.0",
+    "querystring": "^0.2.0",
+    "superagent": "^3.3.1"
+  }
+}
