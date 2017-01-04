@@ -3,7 +3,7 @@
 
   "name": "SoundCloud Tracklists",
   "short_name": "SoundCloudTracklists",
-  "description": "Integrates 1001tracklists into SoundCloud",
+  "description": "Adds track timings to mixes, radios and podcasts on SoundCloud using data from 1001tracklists.",
   "author": "Dan Bovey",
   "version": "1.0.0",
   "minimum_chrome_version": "36",
